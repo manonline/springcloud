@@ -10,7 +10,6 @@ import com.netflix.zuul.groovy.GroovyCompiler;
 import com.netflix.zuul.groovy.GroovyFileFilter;
 import com.netflix.zuul.http.ZuulServlet;
 import com.netflix.zuul.monitoring.MonitoringHelper;
-import org.apache.commons.io.FileUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -19,7 +18,6 @@ import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
 import java.io.IOException;
 
 /**
@@ -40,7 +38,7 @@ public class Application {
             FilterLoader.getInstance().setCompiler(new GroovyCompiler());
             try {
                 FilterFileManager.setFilenameFilter(new GroovyFileFilter());
-                FilterFileManager.init(10,"/Users/liaokailin/code/ieda/springcloud/myzuul/src/main/java/com/lkl/springcloud/zuul/filters/groovy/pre");
+                FilterFileManager.init(10,"/Users/davidqi/devtools/springcloud/spring/springcloud/myzuul/src/main/java/com/lkl/springcloud/zuul/filters/groovy/pre");
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
