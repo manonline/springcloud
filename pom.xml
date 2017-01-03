@@ -5,6 +5,7 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>eureka</module>
+        <module>eureka-two</module>
         <module>eureka-server</module>
         <module>eureka-server-replicas</module>
         <module>eureka-server-replicas-two</module>
